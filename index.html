@@ -74,7 +74,10 @@
                 var list = [];
 
                 for (var i = (page - 1) * take; i < page * take; i++) {
-                    list.push($scope.test.data[i]);
+                    if(i<data.length){
+                      list.push($scope.test.data[i]);
+                    }
+
                 }
 
                 $scope.test.list = list;
